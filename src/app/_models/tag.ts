@@ -27,6 +27,7 @@ export class Tag {
     static readonly EXPO = new Tag('Expo', 'indigo');
     static readonly HTMLSESSION = new Tag('HTMLSession', 'rosybrown');
     static readonly ANGULAR = new Tag('Angular', 'red');
+    static readonly NGXBOOTSTRAP = new Tag('NGX-Bootstrap', 'olive');
 
     // Tools
     static readonly MAVEN = new Tag('Maven', 'chocolate');

@@ -14,8 +14,8 @@ export class ProjectsService {
       summary: 'short description',
       description: '',
       projectLink: '',
-      tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.GIT, Tag.HTML5, Tag.CSS],
-      pictures: []
+      tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.GIT, Tag.HTML5, Tag.CSS, Tag.NGXBOOTSTRAP],
+      pictures: ["../../assets/me_crop.jpg"]
     },
     {
       id: 1,
