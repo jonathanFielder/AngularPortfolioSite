@@ -1,0 +1,13 @@
+.list-group-item:hover .icon {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.words {
+    transition: color 0.3s ease-in-out; 
+}
+
+.list-group-item:hover .words {
+    color: #0077b5;
+}

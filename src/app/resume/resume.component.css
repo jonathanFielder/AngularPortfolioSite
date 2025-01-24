@@ -1,0 +1,29 @@
+.resumeLeft {
+    text-align: left;
+}
+
+accordion-group::ng-deep .btn-link {
+    color: white;
+    outline: none;
+    box-shadow: none;
+    transition: transform 0.2s ease-in-out;
+    text-decoration: none;
+}
+
+accordion-group::ng-deep .btn-link:focus {
+    outline: none;
+    box-shadow: none;
+}
+
+accordion-group::ng-deep .btn-link:hover {
+    transform: scale(1.1);
+}
+
+accordion-group::ng-deep .card-header {
+    background-color: #007bff;
+}
+
+.carrot {
+    width: 10.95px;
+}
+

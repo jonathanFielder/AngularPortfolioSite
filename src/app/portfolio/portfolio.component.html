@@ -1,4 +1,199 @@
 <div class="container">
+    <div class="mb-2">
+        <div>
+            <button class="btn btn-outline-primary mb-2 me-2" (click)="isCollapsed = !isCollapsed">Filter</button>
+        </div>
+
+
+        <div [collapse]="isCollapsed" [isAnimated]="true">
+            <div class="border mb-2 shadow-sm" style="width:500px;">
+                <form>
+                    <button class="btn" style="background-color: aliceblue;" (click)="ResetFilters()">Reset</button>
+                    <div class="row">
+                        <!--Languages-->
+                        <div class="col">
+                            <small><b>Languages:</b></small>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="java"
+                                        (change)="Filter()"
+                                        name="Java">
+                                    <label class="form-check-label small">Java</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="python"
+                                        (change)="Filter()"
+                                        name="Python">
+                                    <label class="form-check-label small">Python</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="kotlin"
+                                        (change)="Filter()"
+                                        name="Kotlin">
+                                    <label class="form-check-label small">Kotlin</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="cpp"
+                                        (change)="Filter()"
+                                        name="C++">
+                                    <label class="form-check-label small">C++</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="csharp"
+                                        (change)="Filter()"
+                                        name="CSharp">
+                                    <label class="form-check-label small">C#</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="html5"
+                                        (change)="Filter()"
+                                        name="HTML5">
+                                    <label class="form-check-label small">HTML5</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="css"
+                                        (change)="Filter()"
+                                        name="CSS">
+                                    <label class="form-check-label small">CSS</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="haskell"
+                                        (change)="Filter()"
+                                        name="Haskell">
+                                    <label class="form-check-label small">Haskell</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="javascript"
+                                        (change)="Filter()"
+                                        name="JavaScript">
+                                    <label class="form-check-label small">JavaScript</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="typeScript"
+                                        (change)="Filter()"
+                                        name="TypeScript">
+                                    <label class="form-check-label small">TypeScript</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="faust"
+                                        (change)="Filter()"
+                                        name="Faust">
+                                    <label class="form-check-label small">Faust</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="maxMsp"
+                                        (change)="Filter()"
+                                        name="MaxMSP">
+                                    <label class="form-check-label small">Max MSP</label>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!--Frameworks-->
+                        <div class="col">
+                            <small><b>Frameworks:</b></small>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="reactNative"
+                                        (change)="Filter()"
+                                        name="ReactNative">
+                                    <label class="form-check-label small">React Native</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="nodeJs"
+                                        (change)="Filter()"
+                                        name="NodeJs">
+                                    <label class="form-check-label small">Node.js</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="beautifulSoup"
+                                        (change)="Filter()"
+                                        name="BeautifulSoup">
+                                    <label class="form-check-label small">Beautiful Soup</label>
+                                </div>
+                            </div>
+                        </div>
+        
+                        <!--Tools-->
+                        <div class="col">
+                            <small><b>Tools:</b></small>
+                            <div class="form-group">
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="git"
+                                        (change)="Filter()"
+                                        name="Git">
+                                    <label class="form-check-label small">Git</label>
+                                </div>
+                                <div class="form-check">
+                                    <input 
+                                        type="checkbox" 
+                                        class="form-check-input position-static me-2"
+                                        [(ngModel)]="maven"
+                                        (change)="Filter()"
+                                        name="Maven">
+                                    <label class="form-check-label small">Maven</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        
+
+
+    </div>
+
+
+
     <div class="row">
         <div *ngFor="let project of projects" class="col-lg-4 col-md-6 mb4" style="max-width: 380px; min-width: 380px;">
             <app-project-card [project]="project"></app-project-card>

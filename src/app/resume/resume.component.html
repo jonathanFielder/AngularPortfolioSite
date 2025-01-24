@@ -1,1 +1,54 @@
-<p>resume works!</p>
+<div class="container text-center">
+    <button (click)="DownloadResume()" class="btn btn-primary mb-5 shadow border">Download PDF Resume</button>
+
+    <div class="pb-2">
+        <accordion [isAnimated]="true" class="shadow">
+
+            <div class="resumeLeft">
+                <accordion-group heading="Education">
+                        <h4>Bachelor's of Science in Computer Science, Minor in Mathematics</h4>
+                        <h5 class="text-primary">Appalachian State University, <i>Boone, NC</i> - 3.84 GPA</h5>
+                        <p>June 2022 - December 2024</p>
+                        <ul>
+                            <li>Graduated with High Honors</li>
+                            <li>
+                                Data Structures, Android Development, 
+                                Neural Networks, Discrete Mathematics,
+                                Client Side, Database, Systems,
+                                Software Engineering
+                            </li>
+                        </ul>
+                        <button (click)="DownloadTranscript()" class="btn btn-primary mb-5 shadow border">Download PDF Transcript</button>
+                </accordion-group>
+
+                <accordion-group heading="Work Experience">
+                    <h4>IT Systems Modernization Intern</h4>
+                    <h5 class="text-primary">Carpenter Technology, <i>Raleigh, NC</i></h5>
+                    <p>June 2022 - December 2024</p>
+                    <ul>
+                        <li>
+                            Developed and maintained automated solutions using RPA 
+                            (Robotic Process Automation) to meet business needs, 
+                            following Agile practices.
+                        </li>
+                        <li>
+                            Researched the viability of AI for internal business 
+                            requirements, including Document Understanding.
+                        </li>
+                        <li>
+                            Leveraged <b>VB</b> and <b>C#</b> along with <b>UiPath</b>
+                            and <b>Power Automate</b> to automate internal business logic.
+                        </li>
+                    </ul>
+                </accordion-group>
+
+                <accordion-group heading="Skills">
+        
+                </accordion-group>
+            </div>
+
+        </accordion>
+    </div>
+
+
+</div>

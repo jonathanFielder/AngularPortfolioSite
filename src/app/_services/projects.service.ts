@@ -15,7 +15,7 @@ export class ProjectsService {
       description: '',
       projectLink: '',
       tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.GIT, Tag.HTML5, Tag.CSS, Tag.NGXBOOTSTRAP],
-      pictures: ["../../assets/me_crop.jpg"]
+      pictures: ["../../assets/images/angularProject/kenya_crop.jpg"]
     },
     {
       id: 1,
@@ -23,7 +23,7 @@ export class ProjectsService {
       summary: 'short description',
       description: '',
       projectLink: '',
-      tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.GIT, Tag.HTML5, Tag.CSS],
+      tags: [Tag.ANGULAR, Tag.GIT, Tag.HTML5, Tag.CSS],
       pictures: []
     },
     {
@@ -32,7 +32,7 @@ export class ProjectsService {
       summary: 'short description',
       description: '',
       projectLink: '',
-      tags: [Tag.ANGULAR, Tag.TYPESCRIPT, Tag.GIT, Tag.HTML5, Tag.CSS],
+      tags: [Tag.ANGULAR, Tag.GIT, Tag.HTML5, Tag.CSS],
       pictures: []
     },
     {
@@ -59,5 +59,25 @@ export class ProjectsService {
     }
 
     return project;
+  }
+
+  GetProjectsByFilter(filterTags: Tag[]) {
+    let filteredProjects: Project[] = [];
+
+    this.projects.forEach(function (project) {
+      let foundAll = true;
+
+      filterTags.forEach(function (filterTag) {
+        if (project.tags.includes(filterTag) == false) {
+          foundAll = false;
+        }
+      });
+
+      if (foundAll) {
+        filteredProjects.push(project);
+      }
+    });
+
+    return filteredProjects;
   }
 }
